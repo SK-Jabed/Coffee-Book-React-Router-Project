@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-      <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+      <footer className="footer footer-center text-white p-10 bg-gray-900">
         <nav>
           <div className="grid grid-flow-col gap-4">
             <a>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </nav>
         <aside>
-          <p>
+          <p className="text-sm text-slate-300 font-medium">
             Copyright © {new Date().getFullYear()} - All right reserved by ACME
             Industries Ltd
           </p>

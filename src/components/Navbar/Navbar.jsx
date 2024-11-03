@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -23,54 +24,35 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className=" menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow flex flex-col gap-2"
             >
               <li>
-                <a>Item 1</a>
+                <NavLink to={"/"}>Home</NavLink>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <NavLink to={"/coffees"}>Coffees</NavLink>
               </li>
               <li>
-                <a>Item 3</a>
+                <NavLink to={"/dashboard"}>Dashboard</NavLink>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to={"/"} className="text-2xl font-bold">
+            COFFEE BOOK
+          </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-end hidden lg:flex">
+          <ul className="menu-horizontal px-1 gap-12">
             <li>
-              <a>Item 1</a>
+              <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
+              <NavLink to={"/coffees"}>Coffees</NavLink>
             </li>
             <li>
-              <a>Item 3</a>
+              <NavLink to={"/dashboard"}>Dashboard</NavLink>
             </li>
           </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
         </div>
       </div>
     );
